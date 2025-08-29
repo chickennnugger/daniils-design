@@ -1,68 +1,78 @@
+/* Detta gör att alla element använder border-box, vilket gör att padding och border räknas in i elementets totala storlek */
 *{box-sizing: border-box;}
+
+/* Tar bort vertikal scroll på sidan */
 body{
     overflow-y: hidden;
 }
+
+/* Stil för navigeringsbaren */
 .navbar {
-    height: 50px;
-    width: auto;
-    background-color: black;
-    color: white;
-    display:flex;
-    align-items:center;
-
+    height: 50px;             /* Höjd på navbaren */
+    width: auto;              /* Tar upp automatisk bredd (hela förälderns bredd) */
+    background-color: black;  /* Svart bakgrund */
+    color: white;             /* Vit textfärg */
+    display:flex;             /* Flexbox-layout */
+    align-items:center;       /* Vertikalt centrera innehållet */
 }
 
+/* Vänster sida av navbaren */
 .navbar-left {
-    width: 50%;
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 10px;
-
+    width: 50%;               /* Tar upp halva navbarens bredd */
+    display: flex;            /* Flexbox-layout */
+    justify-content: flex-start; /* Placera innehållet längst till vänster */
+    padding-left: 10px;       /* Litet avstånd från vänsterkanten */
 }
+
+/* Höger sida av navbaren */
 .navbar-right {
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 50px;
-    
-
+    width: 50%;               /* Tar upp andra halvan av navbaren */
+    display: flex;            
+    justify-content: flex-end; /* Placera innehållet längst till höger */
+    padding-right: 50px;      /* Litet avstånd från högerkanten */
 }
+
+/* Stil för länkar */
 a{
-    padding-right: 10px;
-    text-decoration: none;
-    color: white;
+    padding-right: 10px;      /* Avstånd mellan länkar */
+    text-decoration: none;    /* Tar bort understrykning */
+    color: white;             /* Vit textfärg */
 }
+
+/* Sektion för huvuddel */
 .huvud{
-  position: relative;
-  background-color: black;
-  margin-top: 5px;
-
+  position: relative;         /* Gör det möjligt att absolut-positionera barnen */
+  background-color: black;    /* Svart bakgrund */
+  margin-top: 5px;            /* Litet avstånd från ovanförliggande element */
 }
 
+/* Bildstil */
 img{
-    position: relative;
-    padding-top: 5px;
-    border-radius: 50%;
-    padding: 10%;
-    background-color: black;
-
+    position: relative;       /* Bilden kan positioneras relativt */
+    padding-top: 5px;         /* Avstånd överst */
+    border-radius: 50%;       /* Gör bilden cirkulär */
+    padding: 10%;             /* Generellt padding inuti bilden */
+    background-color: black;  /* Svart bakgrund bakom bilden */
 }
+
+/* Text som placeras ovanpå huvuddelen */
 .text{
-    background-color: white;
-    position: absolute;
-    top: 0%;
-    right: 0%;
-    padding: 20%;
-    padding-bottom: 100%;
-    padding-left: 7%;
-    font-size: 4vh;
-    padding-right: 14%;
-    font-weight: 700;
-
+    background-color: white;   /* Vit bakgrund */
+    position: absolute;        /* Absolut positionering */
+    top: 0%;                   /* Placeras längst upp */
+    right: 0%;                 /* Placeras längst till höger */
+    padding: 20%;              /* Inre avstånd */
+    padding-bottom: 100%;      /* Stor höjd genom padding */
+    padding-left: 7%;          
+    font-size: 4vh;            /* Storlek baserat på viewport-höjd */
+    padding-right: 14%;        
+    font-weight: 700;          /* Fet text */
 }
+
+/* Undertext under den stora texten */
 .undertext{
-    position: absolute;
-    top: 50%;
-    right: 17%;
+    position: absolute;       /* Absolut positionering */
+    top: 50%;                 /* Placerad mitt i y-led */
+    right: 17%;               /* Litet avstånd från högerkanten */
 }
 
