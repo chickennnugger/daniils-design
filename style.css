@@ -41,40 +41,58 @@ a{
 
 /* Sektion för huvuddel */
 .huvud{
-  position: relative;         /* Gör det möjligt att absolut-positionera barnen */
   background-color: black;    /* Svart bakgrund */
-  margin-top: 5px;            /* Litet avstånd från ovanförliggande element */
+  margin-top: 5px;  
+  display: flex;          /* Litet avstånd från ovanförliggande element */
+  flex-wrap: wrap;
+  justify-content: center;  /* Centrera innehållet horisontellt */
+  align-items: center;      /* Centrera innehållet vertikalt */
+  text-align: center;    /* Centrera texten */
 }
 
 /* Bildstil */
 img{
-    position: relative;       /* Bilden kan positioneras relativt */
+    flex: 1;               /* Tar upp 50% av förälderns bredd */
     padding-top: 5px;         /* Avstånd överst */
     border-radius: 50%;       /* Gör bilden cirkulär */
-    padding: 10%;             /* Generellt padding inuti bilden */
-    background-color: black;  /* Svart bakgrund bakom bilden */
+   
+    background-color: black;  /* Svart bakgrund bakom bilden */  
+    max-width: 50%;        /* Maximal bredd på bilden */
+    max-height: 100vh;      /* Maximal höjd på bilden baserat på viewport-höjd */
 }
 
 /* Text som placeras ovanpå huvuddelen */
 .text{
     background-color: white;   /* Vit bakgrund */
-    position: absolute;        /* Absolut positionering */
+    flex: 1;
+
     top: 0%;                   /* Placeras längst upp */
     right: 0%;                 /* Placeras längst till höger */
     padding: 20%;              /* Inre avstånd */
     padding-bottom: 100%;      /* Stor höjd genom padding */
     padding-left: 7%;          
     font-size: 4vh;            /* Storlek baserat på viewport-höjd */
-    padding-right: 14%;        
+    padding-right: 5%;        
     font-weight: 700;          /* Fet text */
 }
 
 /* Undertext under den stora texten */
 .undertext{
-    position: absolute;       /* Absolut positionering */
-    top: 50%;                 /* Placerad mitt i y-led */
-    right: 17%;               /* Litet avstånd från högerkanten */
+    display: flex;
+    justify-content: center;  /* Centrera texten horisontellt */
+    font-size: 14px;            /* Litet avstånd från högerkanten */
 }
-@media (max-width: 768px) {
-    
+@media (max-width: 600px) {
+    .navbar-right {
+        display: none;         /* Dölj höger sida av navbaren på små skärmar */
+    }
+    .text {
+        font-size: 6vw;        /* Justera textstorlek för små skärmar */
+        padding: 10%;          /* Minska padding för små skärmar */
+        padding-bottom: 150%;  /* Öka padding-bottom för att ge mer höjd */
+    }
+    .undertext {
+        font-size: 12px;       /* Justera undertextstorlek för små skärmar */
+        right: 10%;            /* Minska avstånd från högerkanten */
+    }
 }
