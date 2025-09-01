@@ -75,4 +75,6 @@ img{
     top: 50%;                 /* Placerad mitt i y-led */
     right: 17%;               /* Litet avstånd från högerkanten */
 }
-
+@media (max-width: 768px) {
+    
+}
